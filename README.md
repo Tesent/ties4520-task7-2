@@ -2,6 +2,10 @@
 
 ## Example request to the remote backend service
 
+POST http://localhost:8080/SSWAP_Remote_Service_2019-1.0-SNAPSHOT/mediator
+
+BODY:
+
 @prefix c: <http://example.com/cottage#> .
 @prefix service: <http://example.com/CottageBookingService#> .
 @prefix sswap: <http://sswapmeet.sswap.info/sswap#> .
