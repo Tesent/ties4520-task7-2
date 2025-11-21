@@ -1,0 +1,79 @@
+@prefix : <http://example.com/individuals#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix c: <http://example.com/cottage#> .
+
+:MountainViewCabin a c:Cottage ;
+    c:cottageRealCapacity 6 ;
+    c:numOfBedrooms 3 ;
+    c:distanceToLake 800.0 ;
+    c:closestCity "Big city" ;
+    c:distanceToClosestCity 12.5 ;
+    c:bookingAddress "Mountain Road 1 A 2" ;
+    c:cottageImageUrl <https://ties4520-a05db293e4e0.herokuapp.com/public/mountainViewCabin.JPG> .
+
+:LakesideHaven a c:Cottage ;
+    c:cottageRealCapacity 4 ;
+    c:numOfBedrooms 2 ;
+    c:distanceToLake 5.0 ;
+    c:closestCity "Big city" ;
+    c:distanceToClosestCity 5.0 ;
+    c:bookingAddress "Lake Lane 20" ;
+    c:cottageImageUrl <https://ties4520-a05db293e4e0.herokuapp.com/public/lakesideHaven.JPG> .
+
+:ForestRetreat a c:Cottage ;
+    c:cottageRealCapacity 5 ;
+    c:numOfBedrooms 2 ;
+    c:distanceToLake 300.0 ;
+    c:closestCity "New city" ;
+    c:distanceToClosestCity 8.0 ;
+    c:bookingAddress "Forest Trail 3" ;
+    c:cottageImageUrl <https://ties4520-a05db293e4e0.herokuapp.com/public/forestRetreat.JPG> .
+
+:LuxuryCabin a c:Cottage ;
+    c:cottageRealCapacity 8 ;
+    c:numOfBedrooms 4 ;
+    c:distanceToLake 150.0 ;
+    c:closestCity "New city" ;
+    c:distanceToClosestCity 10.0 ;
+    c:bookingAddress "Luxury Way 9" ;
+    c:cottageImageUrl <https://ties4520-a05db293e4e0.herokuapp.com/public/luxuryCabin.JPG> .
+
+:HuntingCabin a c:Cottage ;
+    c:cottageRealCapacity 3 ;
+    c:numOfBedrooms 1 ;
+    c:distanceToLake 500.0 ;
+    c:closestCity "New city" ;
+    c:distanceToClosestCity 15.0 ;
+    c:bookingAddress "Hunting Road 4 B 1" ;
+    c:cottageImageUrl <https://ties4520-a05db293e4e0.herokuapp.com/public/huntingCabin.JPG> .
+
+:Booking1 a c:Booking ;
+   c:bookingNumber 1001 ;
+   c:startOfBooking "2025-11-01"^^xsd:date ;
+   c:endOfBooking "2025-11-01"^^xsd:date ;
+   c:hasCottage :MountainViewCabin .
+
+:Booking2 a c:Booking ;
+   c:bookingNumber 1002 ;
+   c:startOfBooking "2025-11-07"^^xsd:date ;
+   c:endOfBooking "2025-11-09"^^xsd:date ;
+   c:hasCottage :LakesideHaven .
+
+:Booking3 a c:Booking ;
+   c:bookingNumber 1003 ;
+   c:startOfBooking "2025-11-10"^^xsd:date ;
+   c:endOfBooking "2025-11-17"^^xsd:date ;
+   c:hasCottage :ForestRetreat .
+
+:Booking4 a c:Booking ;
+   c:bookingNumber 1004 ;
+   c:startOfBooking "2025-11-01"^^xsd:date ;
+   c:endOfBooking "2025-11-15"^^xsd:date ;
+   c:hasCottage :LuxuryCabin .
+
+:Booking5 a c:Booking ;
+   c:bookingNumber 1005 ;
+   c:startOfBooking "2025-11-01"^^xsd:date ;
+   c:endOfBooking "2025-11-30"^^xsd:date ;
+   c:hasCottage :HuntingCabin .

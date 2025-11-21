@@ -1,0 +1,62 @@
+@prefix : <http://example.com/cottage#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:Cottage a rdfs:Class .
+:Booking a rdfs:Class .
+
+:BookingRequest a rdfs:Class .
+:BookingResponse a rdfs:Class .
+
+:cottageRealCapacity a rdf:Property ;
+    rdfs:domain :Cottage ;
+    rdfs:range xsd:int .
+
+:numOfBedrooms a rdf:Property ;
+    rdfs:domain :Cottage ;
+    rdfs:range xsd:int .
+
+:distanceToLake a rdf:Property ;
+    rdfs:domain :Cottage ;
+    rdfs:range xsd:double .
+
+:closestCity a rdf:Property ;
+    rdfs:domain :Cottage ;
+    rdfs:range xsd:string .
+
+:distanceToClosestCity a rdf:Property ;
+    rdfs:domain :Cottage ;
+    rdfs:range xsd:double .
+
+:bookingAddress a rdf:Property ;
+    rdfs:domain :Cottage ;
+    rdfs:range xsd:string .
+
+:cottageImageUrl a rdf:Property ;
+    rdfs:domain :Cottage ;
+    rdfs:range xsd:anyURI .
+
+:bookingNumber a rdf:Property ;
+    rdfs:domain :Booking ;
+    rdfs:range xsd:long .
+
+:startOfBooking a rdf:Property ;
+    rdfs:domain :Booking ;
+    rdfs:range xsd:date .
+
+:endOfBooking a rdf:Property ;
+    rdfs:domain :Booking ;
+    rdfs:range xsd:date .
+
+:hasCottage a rdf:Property ;
+    rdfs:domain :Booking ;
+    rdfs:range :Cottage .
+
+:reqNumOfDays a rdf:Property ;
+    rdfs:domain :BookingRequest ;
+    rdfs:range xsd:int .
+
+:numOfPeople a rdf:Property ;
+    rdfs:domain :BookingRequest ;
+    rdfs:range xsd:int .

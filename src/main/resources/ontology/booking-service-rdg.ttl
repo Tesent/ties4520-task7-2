@@ -1,0 +1,36 @@
+@prefix c: <http://example.com/cottage#> .
+@prefix service: <http://example.com/CottageBookingService#> .
+@prefix sswap: <http://sswapmeet.sswap.info/sswap#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+service:QueryCottageService
+    rdf:type sswap:Resource , c:BookingQueryService ;
+    sswap:providedBy service:BookingController ;
+    sswap:name """Booking service query""" ;
+    sswap:oneLineDescription """Booking query service that accepts a set of parameters that are then
+                              used to find suitable cottages for booking.""" ;
+    sswap:operatesOn [
+        rdf:type sswap:Graph ;
+        sswap:hasMapping [
+            rdf:type sswap:Subject , c:BookingRequest ;
+            c:distanceToLake "" ;
+            c:distanceToClosestCity "" ;
+            c:numOfPeople "" ;
+            c:numOfBedrooms "" ;
+            c:closestCity "" ;
+            c:reqNumOfDays "" ;
+            c:bookingDate "" ;
+        ];
+        sswap:mapsTo [
+            rdf:type sswap:Object , c:BookingResponse ;
+            c:cottageImageUrl "" ;
+            c:cottageRealCapacity "" ;
+            c:numOfBedrooms "" ;
+            c:distanceToLake "" ;
+            c:closestCity "" ;
+            c:distanceToClosestCity "" ;
+            c:bookingNumber "" ;
+            c:startOfBooking "" ;
+            c:endOfBooking "" ;
+        ]
+    ] .

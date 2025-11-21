@@ -1,0 +1,20 @@
+@prefix c: <http://example.com/cottage#> .
+@prefix service: <http://example.com/CottageBookingService#> .
+@prefix sswap: <http://sswapmeet.sswap.info/sswap#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+service:ResponseQueryCottage
+    rdf:type sswap:ResponseGraph ;
+    sswap:hasMapping [
+        rdf:type sswap:Object , c:BookingResponse ;
+        c:cottageImageUrl <https://ties4520-a05db293e4e0.herokuapp.com/public/luxuryCabin.JPG> ;
+        c:cottageRealCapacity 4 ;
+        c:numOfBedrooms 2 ;
+        c:distanceToLake 250.0 ;
+        c:distanceToClosestCity 1.0 ;
+        c:closestCity "New City" ;
+        c:bookingNumber 2554 ;
+        c:startOfBooking "2025-12-22"^^xsd:date ;
+        c:endOfBooking "2025-12-31"^^xsd:date ;
+    ] .

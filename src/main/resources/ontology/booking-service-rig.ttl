@@ -1,0 +1,18 @@
+@prefix c: <http://example.com/cottage#> .
+@prefix service: <http://example.com/CottageBookingService#> .
+@prefix sswap: <http://sswapmeet.sswap.info/sswap#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+service:RequestQueryCottage
+    rdf:type sswap:RequestGraph ;
+    sswap:hasMapping [
+        rdf:type sswap:Subject , c:BookingRequest ;
+        c:distanceToLake 500.0 ;
+        c:distanceToClosestCity 5.0 ;
+        c:numOfPeople 2 ;
+        c:numOfBedrooms 1 ;
+        c:closestCity "New City" ;
+        c:reqNumOfDays 10 ;
+        c:bookingDate "2015-12-22"^^xsd:date ;
+    ] .
