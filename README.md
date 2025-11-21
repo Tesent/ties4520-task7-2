@@ -1,6 +1,6 @@
-#TIES4520 Task 7-2
+# TIES4520 Task 7-2
 
-##Example request to the remote backend service
+## Example request to the remote backend service
 
 @prefix c: <http://example.com/cottage#> .
 @prefix service: <http://example.com/CottageBookingService#> .
